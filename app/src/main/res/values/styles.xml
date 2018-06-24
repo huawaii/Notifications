@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- pupupwindow的弹出和消失动画 -->
+    <style name="popup_window_anim">
+        <item name="android:windowEnterAnimation">@anim/popup_window_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_window_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawaii.notifications.Settings.SettingsTips
+    android:id="@+id/settings_tips"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:clickable="true"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连续发送："/>
+
+    <EditText
+        android:id="@+id/editText_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="number"
+        android:text="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="条，间隔："/>
+
+    <EditText
+        android:id="@+id/editText_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="number"
+        android:text="1000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ms"/>
+</com.huawaii.notifications.Settings.SettingsTips>

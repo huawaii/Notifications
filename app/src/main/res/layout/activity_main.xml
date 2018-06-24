@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <include layout="@layout/settings_group_1"/>
+
+        <include layout="@layout/settings_group_2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/button_shape_bg_red"
+                android:onClick="clearNotification"
+                android:text="Clear"
+                android:textAllCaps="false"
+                android:textSize="20sp"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/button_shape_bg_blue"
+                android:onClick="sendNotification"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/settings_tips"/>
+</RelativeLayout>

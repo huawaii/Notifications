@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Notifications</string>
+    <string name="service_name">一键获取通知信息</string>
+    <string name="custom_layout">Custom Layout</string>
+    <string name="action_clean_all">一键获取</string>
+    <string name="action_settings">Go to Source Code</string>
+
+    <string name="notification_template_default">"普通模板"</string>
+    <string name="custom_template_style_type_default">"系统默认样式"</string>
+    <string name="template_button_number_default">通知按钮: <xliff:g id="NUMBER">%d</xliff:g>个</string>
+
+    <string name="notification_channel_name">"channel_name"</string>
+    <string name="notification_channel_description">"channel_description"</string>
+</resources>

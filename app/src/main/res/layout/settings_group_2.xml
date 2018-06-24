@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawaii.notifications.Settings.SettingsGroup2
+    android:id="@+id/settings_second"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/layout_corners_bg">
+
+    <TextView
+        android:id="@+id/Settings_second_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="通知特性："/>
+
+    <LinearLayout
+        android:id="@+id/Settings_second_checkbox_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Settings_second_text"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:weightSum="5">
+
+        <CheckBox
+            android:id="@+id/cb_headsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="悬浮"/>
+
+        <CheckBox
+            android:id="@+id/cb_vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="震动"/>
+
+        <CheckBox
+            android:id="@+id/cb_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="响铃"/>
+
+        <CheckBox
+            android:id="@+id/cb_lights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="呼吸灯"/>
+
+        <CheckBox
+            android:id="@+id/cb_onGoing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="常驻"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Settings_second_checkbox_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Settings_second_checkbox_1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp">
+
+        <CheckBox
+            android:id="@+id/cb_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="通知回复"/>
+
+        <CheckBox
+            android:id="@+id/cb_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="通知分组"/>
+    </RelativeLayout>
+</com.huawaii.notifications.Settings.SettingsGroup2>

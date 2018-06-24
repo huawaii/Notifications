@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huawaii.notifications.Settings.SettingsGroup1
+    android:id="@+id/settings_first"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_corners_bg">
+
+    <TextView
+        android:id="@+id/Settings_first_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="模板类型："/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Settings_first_text"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/all_template_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableEnd="@drawable/ic_arrow_dark"
+            android:drawablePadding="5dp"
+            android:text="@string/notification_template_default"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/custom_template_style_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:drawableEnd="@drawable/ic_arrow_dark"
+                android:drawablePadding="5dp"
+                android:text="@string/custom_template_style_type_default"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/template_button_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_dark"
+                android:drawablePadding="5dp"
+                android:text="@string/template_button_number_default"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.huawaii.notifications.Settings.SettingsGroup1>
