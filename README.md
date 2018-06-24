@@ -12,9 +12,9 @@
 4. 支持抓取当前通知栏所有活动通知的内容
 
 <div align="center">    
-    <img src="http://i1.piimg.com/567571/6de91bb2939f456f.jpg" width = "288" height = "512" alt="应用主界面" align=center />
-    <img src="http://i1.piimg.com/567571/e2d46979059d4fe3.jpg" width = "288" height = "512" alt="抓取通知信息" align=center />
-    <img src="http://p1.bpimg.com/567571/7f6737610b952fac.jpg" width = "288" height = "512" alt="提取有效通知信息" align=center />
+    <img src="https://raw.githubusercontent.com/huawaii/MarkdownPhotos/master/NotificationDemo/S70226-151107.jpg" width = "288" height = "512" alt="应用主界面" align=center />
+    <img src="https://raw.githubusercontent.com/huawaii/MarkdownPhotos/master/NotificationDemo/S70226-151134.jpg" width = "288" height = "512" alt="抓取通知信息" align=center />
+    <img src="https://raw.githubusercontent.com/huawaii/MarkdownPhotos/master/NotificationDemo/S70226-152356.jpg" width = "288" height = "512" alt="提取有效通知信息" align=center />
 </div>
 
 '
