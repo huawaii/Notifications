@@ -275,7 +275,7 @@ public class CreateNotification {
     private void setActionButton(Builder builder) {
         if (mButtonNum != 0) {
             for (int i = 0; i < mButtonNum; i++) {
-                builder.addAction(R.drawable.ic_launcher, "Button", mResultPendingIntent2);
+                builder.addAction(R.drawable.ic_launcher, "已读", mResultPendingIntent2);
             }
         }
     }
@@ -299,7 +299,7 @@ public class CreateNotification {
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(mContentTitle + "Normal Notification") // 显示于 line1
-                .setContentText(mContentText + "，普通小通知.")   // 显示于 line3
+                .setContentText(mContentText + "，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.")   // 显示于 line3
                 .setLargeIcon(picture)
                 .setContentIntent(mResultPendingIntent1)
                 .setAutoCancel(true)
@@ -336,7 +336,7 @@ public class CreateNotification {
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(mContentTitle + "Circle ProgressBar " + "Notification")
-                .setContentText(mContentText + "，Flyme 定制进度条.")
+                .setContentText(mContentText + "，Flyme 定制进度条.，Flyme 定制进度条.，Flyme 定制进度条.，Flyme 定制进度条.")
                 .setProgress(0, 0, true)
                 .setLargeIcon(picture)
                 .setContentIntent(mResultPendingIntent1)
@@ -378,7 +378,7 @@ public class CreateNotification {
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(mContentTitle + "Big Text Notification")   // 显示于 line1
-                .setContentText(mContentText + "，大通知为系统大文本样式.") // 显示于 line3
+                .setContentText(mContentText + "，大通知为系统大文本样式.，大通知为系统大文本样式.，大通知为系统大文本样式.") // 显示于 line3
                 .setLargeIcon(picture)
                 .setContentIntent(mResultPendingIntent1)
                 .setAutoCancel(true)
@@ -408,7 +408,7 @@ public class CreateNotification {
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(mContentTitle + "Big Picture Notification")
-                .setContentText(mContentText + "，大通知为系统大图样式.")
+                .setContentText(mContentText + "，大通知为系统大图样式.，大通知为系统大图样式.，大通知为系统大图样式.，大通知为系统大图样式.")
                 .setLargeIcon(picture)
                 .setContentIntent(mResultPendingIntent1)
                 .setAutoCancel(true)
@@ -442,7 +442,7 @@ public class CreateNotification {
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle(mContentTitle + "Inbox Style Notification")
-                .setContentText(mContentText + "，大通知为系统邮件样式.")
+                .setContentText(mContentText + "，大通知为系统邮件样式.，大通知为系统邮件样式.，大通知为系统邮件样式.，大通知为系统邮件样式.")
                 .setLargeIcon(picture)
                 .setContentIntent(mResultPendingIntent1)
                 .setAutoCancel(true)
