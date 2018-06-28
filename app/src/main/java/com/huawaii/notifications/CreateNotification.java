@@ -45,6 +45,8 @@ import static com.huawaii.notifications.Settings.SettingsGroup1.PROGRESSBAR_CIRC
 /** Created by lzh on 16-8-11.**/
 public class CreateNotification {
 
+    private static final String TAG = "huawaii";
+
     public static final String KEY_TEXT_REPLY = "key_text_reply";
     public static final String FILTER_INTENT_REPLY = "filter_intent_reply";
     public static final String FILTER_INTENT_ACTION = "intent.action.huawaii";
@@ -58,7 +60,7 @@ public class CreateNotification {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (FILTER_INTENT_ACTION.equals(intent.getAction())) {
-                Log.d("lzh", "intent.action.huawaii cancelAllNotification");
+                Log.d(TAG, "intent.action.huawaii cancelAllNotification");
                 cancelAllNotification();
             }
         }
@@ -137,13 +139,13 @@ public class CreateNotification {
 
         //最后在 notificationManager 中创建该通知渠道
         mNotificationManager.createNotificationChannel(channel);
-        Log.d("lzh", "createNotificationChannel -> channelParamId " + channelParam.toString());
+        Log.d(TAG, "createNotificationChannel -> channelParamId " + channelParam.toString());
     }
 
     @TargetApi(Build.VERSION_CODES.O)
     private void checkNotificationChannel() {
         NotificationChannel channel = mNotificationManager.getNotificationChannel(mChannelParam.toString());
-        Log.d("lzh", "CreateNotification checkNotificationChannel.146-> "+mChannelParam.toString()+"  "+(channel == null));
+        Log.d(TAG, "CreateNotification checkNotificationChannel.146-> "+mChannelParam.toString()+"  "+(channel == null));
         if (channel == null) {
             createNotificationChannel(mChannelParam);
         }
@@ -372,7 +374,7 @@ public class CreateNotification {
             Method setHeadsUpMaxLines = styleClass.getMethod("setHeadsUpMaxLines", int.class);
             setHeadsUpMaxLines.invoke(notiStyle, 3);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-            Log.e("lzh", "CreateNotification createBigTextNotification-> \n" + Log.getStackTraceString(e));
+            Log.e(TAG, "CreateNotification createBigTextNotification-> \n" + Log.getStackTraceString(e));
         }
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
