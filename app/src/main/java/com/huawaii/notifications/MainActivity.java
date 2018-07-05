@@ -51,8 +51,7 @@ public class MainActivity extends Activity implements SettingsCallback {
                 startActivity(intent);
                 return true;
             case R.id.action_settings:
-                Uri uri = Uri.parse("https://github" + ".com/huawaii/SystemUIDemo/blob/master/app_NotifiyFlyme/README" +
-                        ".md");
+                Uri uri = Uri.parse("https://github.com/huawaii/NotificationDemo/blob/master/README.md");
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setData(uri);
                 startActivity(intent);
