@@ -296,7 +296,7 @@ public class CreateNotification {
 
 
     private Notification createNormalNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
@@ -333,7 +333,7 @@ public class CreateNotification {
 
 
     private Notification createProgressBarCircleNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
                 .setSmallIcon(R.drawable.ic_launcher)
@@ -360,7 +360,7 @@ public class CreateNotification {
 
 
     private Notification createBigTextNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
         CharSequence bigText = "最新最全的Flyme固件更新；Flyme软件商店提供海量应用供用户下载；" +
                 "Flyme云服务提供用户帐号与数据管理服务；Flyme论坛为用户提供沟通交流平台；品牌窗口展示最新的Flyme资讯。";
 
@@ -399,7 +399,7 @@ public class CreateNotification {
 
 
     private Notification createBigPictureNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         // Create the style object with BigPictureStyle subclass.
         Notification.BigPictureStyle notiStyle = new Notification.BigPictureStyle();
@@ -429,7 +429,7 @@ public class CreateNotification {
 
 
     private Notification createInboxNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         // Create the style object with InboxStyle subclass.
         Notification.InboxStyle notiStyle = new Notification.InboxStyle();
@@ -463,7 +463,7 @@ public class CreateNotification {
 
     @TargetApi(Build.VERSION_CODES.N)
     private Notification createMessagingNotification() {
-        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda1);
+        Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         // Create the style object with MessagingStyle subclass.
         Notification.MessagingStyle notiStyle = new Notification.MessagingStyle("大师");

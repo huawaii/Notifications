@@ -16,7 +16,7 @@
         android:id="@+id/image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/panda2"
+        android:background="@mipmap/panda"
         android:contentDescription="@string/custom_layout"/>
 
 </LinearLayout>
