@@ -25,8 +25,8 @@ import android.util.Log;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
+import com.huawaii.notifications.reflect.NotificationProxy;
 import com.huawaii.notifications.utils.NotificationChannelUtils;
-import com.meizu.flyme.reflect.NotificationProxy;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
