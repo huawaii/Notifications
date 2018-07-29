@@ -6,17 +6,22 @@
 package com.huawaii.notifications;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.huawaii.notifications.Settings.SettingsCallback;
 import com.huawaii.notifications.Settings.SettingsGroup1;
 import com.huawaii.notifications.Settings.SettingsGroup2;
 import com.huawaii.notifications.Settings.SettingsTips;
+import com.huawaii.notifications.push.MyPushMsgReceiver;
 import com.huawaii.notifications.utils.PopupWindowUtils;
 
 
@@ -49,6 +54,14 @@ public class MainActivity extends Activity implements SettingsCallback {
             case R.id.action_capture_notification_info:
                 intent.setAction("com.huawaii.notification.CAPTURE_NOTIFICATION_INFO");
                 startActivity(intent);
+                return true;
+            case R.id.action_copy_push_id:
+                ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                if (cm != null) {
+                    ClipData mClipData = ClipData.newPlainText("PushId", MyPushMsgReceiver.sPushId);
+                    cm.setPrimaryClip(mClipData);
+                    Toast.makeText(this, "PushId: " + MyPushMsgReceiver.sPushId, Toast.LENGTH_SHORT).show();
+                }
                 return true;
             case R.id.action_settings:
                 Uri uri = Uri.parse("https://github.com/huawaii/NotificationDemo/blob/master/README.md");

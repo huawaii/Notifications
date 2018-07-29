@@ -4,7 +4,8 @@
     <string name="service_name">一键获取通知信息</string>
     <string name="custom_layout">Custom Layout</string>
     <string name="action_clean_all">一键获取</string>
-    <string name="action_settings">Go to Source Code</string>
+    <string name="action_push_id">复制PushID</string>
+    <string name="action_settings">Author：huawaii</string>
 
     <string name="notification_template_default">"普通模板"</string>
     <string name="custom_template_style_type_default">"系统默认样式"</string>
