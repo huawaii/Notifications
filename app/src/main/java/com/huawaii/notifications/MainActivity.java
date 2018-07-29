@@ -60,7 +60,7 @@ public class MainActivity extends Activity implements SettingsCallback {
                 if (cm != null) {
                     ClipData mClipData = ClipData.newPlainText("PushId", MyPushMsgReceiver.sPushId);
                     cm.setPrimaryClip(mClipData);
-                    Toast.makeText(this, "PushId: " + MyPushMsgReceiver.sPushId, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "已复制 PushId 到剪切板\n" + MyPushMsgReceiver.sPushId, Toast.LENGTH_SHORT).show();
                 }
                 return true;
             case R.id.action_settings:
