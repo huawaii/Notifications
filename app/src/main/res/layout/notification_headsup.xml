@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notify_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/notification_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher_smsmms" />
+
+        <TextView
+            android:id="@+id/default_title"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="13.33dp"
+            android:layout_toRightOf="@id/logo_img"
+            android:ellipsize="end"
+            android:fontFamily="Flyme-Normal"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="信息"
+            android:textColor="#E6000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/receive_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="13.67dp"
+            android:fontFamily="Flyme-Normal"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#E6000000"
+            android:textSize="11sp" />
+
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_img">
+
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="10dp"
+                    android:maxWidth="318dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:includeFontPadding="false"
+                        android:maxWidth="280dp"
+                        android:singleLine="true"
+                        android:text="取件码:67064967"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/msg_status_sim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginLeft="11dp"
+                    android:lineSpacingExtra="2.5dp"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="Flyme-Normal"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:maxWidth="318dp"
+                    android:text="取件地址:魅族新奥林保安岗旁丰巢快递柜2号柜"
+                    android:textColor="#E6000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/contact_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="5dp"
+                android:src="@mipmap/ic_launcher_smsmms"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/div_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.67dp"
+        android:layout_below="@+id/notification_content"
+        android:layout_marginTop="10dp"
+        android:background="#1A000000" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_below="@+id/div_line"
+        android:gravity="center_vertical"
+        android:minHeight="38dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:fontFamily="flyme-medium"
+            android:gravity="center"
+            android:text="已读"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/one_div"
+            android:layout_width="0.67dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_height="match_parent"
+            android:background="#1A000000" />
+
+        <TextView
+            android:id="@+id/btn_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:fontFamily="flyme-medium"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/two_div"
+            android:layout_width="0.67dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_height="match_parent"
+            android:background="#1A000000" />
+
+        <TextView
+            android:id="@+id/btn_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:fontFamily="flyme-medium"
+            android:gravity="center"
+            android:text="回复"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
