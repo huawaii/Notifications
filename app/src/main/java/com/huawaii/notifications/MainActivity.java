@@ -22,6 +22,7 @@ import com.huawaii.notifications.Settings.SettingsGroup1;
 import com.huawaii.notifications.Settings.SettingsGroup2;
 import com.huawaii.notifications.Settings.SettingsTips;
 import com.huawaii.notifications.push.MyPushMsgReceiver;
+import com.huawaii.notifications.utils.NotificationListenerUtils;
 import com.huawaii.notifications.utils.PopupWindowUtils;
 
 
@@ -38,6 +39,8 @@ public class MainActivity extends Activity implements SettingsCallback {
 
         mCreateNotification = new CreateNotification(this);
         initSettingsView();
+
+        NotificationListenerUtils.refreshNotificationListener(this, getPackageManager());
     }
 
     @Override

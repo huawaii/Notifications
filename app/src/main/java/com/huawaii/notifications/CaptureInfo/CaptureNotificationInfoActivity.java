@@ -26,6 +26,7 @@ import com.huawaii.notifications.CaptureInfo.CaptureNotificationInfoAdapter.Item
 import com.huawaii.notifications.CaptureInfo.CaptureNotificationInfoAdapter.ViewHolder;
 import com.huawaii.notifications.CaptureInfo.InfoPopupWindowAdapter.InfoBean;
 import com.huawaii.notifications.R;
+import com.huawaii.notifications.utils.NotificationListenerUtils;
 import com.huawaii.notifications.utils.PopupWindowUtils;
 
 import java.util.ArrayList;
@@ -41,7 +42,6 @@ import static android.app.Notification.EXTRA_TITLE;
 public class CaptureNotificationInfoActivity extends Activity implements CaptureNotificationInfoAdapter
         .AdapterCallback {
 
-    private static final String ENABLED_NOTIFICATION_LISTENERS = "enabled_notification_listeners";
     private ListView mListView;
     private int mUpdateTimes;
 
@@ -71,7 +71,7 @@ public class CaptureNotificationInfoActivity extends Activity implements Capture
 
 
     private void captureNotificationInfo() {
-        if (!isEnabled()) {
+        if (!NotificationListenerUtils.isEnabled(this)) {
             showConfirmDialog();
         } else {
             if (CaptureNotificationInfoService.sService != null) {
@@ -100,23 +100,6 @@ public class CaptureNotificationInfoActivity extends Activity implements Capture
     }
 
 
-    private boolean isEnabled() {
-        String pkgName = getPackageName();
-        final String flat = Settings.Secure.getString(getContentResolver(), ENABLED_NOTIFICATION_LISTENERS);
-        if (!TextUtils.isEmpty(flat)) {
-            final String[] names = flat.split(":");
-            for (String s : names) {
-                final ComponentName cn = ComponentName.unflattenFromString(s);
-                if (cn != null) {
-                    if (TextUtils.equals(pkgName, cn.getPackageName())) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
-    }
-
     private void showConfirmDialog() {
         new AlertDialog.Builder(this).setMessage("请打开“一键获取通知信息”的通知读取权限，然后再次点击“刷新”").setTitle("一键获取通知信息")
                 .setIconAttribute(android.R.attr.alertDialogIcon).setCancelable(true).setPositiveButton(android.R
@@ -132,7 +115,7 @@ public class CaptureNotificationInfoActivity extends Activity implements Capture
     }
 
     private void openNotificationAccess() {
-        Intent intent = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+        Intent intent = new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS);
         startActivity(intent);
     }
 

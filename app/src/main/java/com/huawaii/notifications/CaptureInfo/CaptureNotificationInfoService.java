@@ -11,7 +11,7 @@ import android.service.notification.StatusBarNotification;
 
 public class CaptureNotificationInfoService extends NotificationListenerService {
 
-    protected static CaptureNotificationInfoService sService;
+    public static CaptureNotificationInfoService sService;
 
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
