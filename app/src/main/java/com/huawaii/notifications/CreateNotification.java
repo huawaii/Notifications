@@ -299,7 +299,7 @@ public class CreateNotification {
         Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Normal Notification") // 显示于 line1
                 .setContentText(mContentText + "，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.")   // 显示于 line3
                 .setLargeIcon(picture)
@@ -336,7 +336,7 @@ public class CreateNotification {
         Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Circle ProgressBar " + "Notification")
                 .setContentText(mContentText + "，Flyme 定制进度条.，Flyme 定制进度条.，Flyme 定制进度条.，Flyme 定制进度条.")
                 .setProgress(0, 0, true)
@@ -378,7 +378,7 @@ public class CreateNotification {
         }
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Big Text Notification")   // 显示于 line1
                 .setContentText(mContentText + "，大通知为系统大文本样式.，大通知为系统大文本样式.，大通知为系统大文本样式.") // 显示于 line3
                 .setLargeIcon(picture)
@@ -408,7 +408,7 @@ public class CreateNotification {
         notiStyle.bigPicture(picture);  // Add the big picture to the style.
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Big Picture Notification")
                 .setContentText(mContentText + "，大通知为系统大图样式.，大通知为系统大图样式.，大通知为系统大图样式.，大通知为系统大图样式.")
                 .setLargeIcon(picture)
@@ -442,7 +442,7 @@ public class CreateNotification {
         notiStyle.setSummaryText(mContentText + "Flyme: +2 more Line Samples");
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Inbox Style Notification")
                 .setContentText(mContentText + "，大通知为系统邮件样式.，大通知为系统邮件样式.，大通知为系统邮件样式.，大通知为系统邮件样式.")
                 .setLargeIcon(picture)
@@ -475,7 +475,7 @@ public class CreateNotification {
         notiStyle.addMessage("... ...", System.currentTimeMillis(), "老王");
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.drawable.mz_push_notification_small_icon)
                 .setContentTitle(mContentTitle + "Inbox Style Notification")
                 .setContentText(mContentText + "，大通知为系统邮件样式.")
                 .setLargeIcon(picture)
