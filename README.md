@@ -18,7 +18,7 @@
 </div>
 
 '
-E-mail: lizongheng@meizu.com
+E-mail: lizongheng2010@163.com
 '
 
 
