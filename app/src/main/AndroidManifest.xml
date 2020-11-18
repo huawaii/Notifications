@@ -51,6 +51,13 @@
         <service
             android:name=".ForegroundService"
             android:exported="false"/>
+        <service
+            android:name=".ReplyService">
+            <intent-filter >
+                <action android:name="com.huawaii.notifications.ACTION_REPLY_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
 
         <!-- push应用定义消息receiver声明 -->
         <receiver android:name="com.huawaii.notifications.push.MyPushMsgReceiver">

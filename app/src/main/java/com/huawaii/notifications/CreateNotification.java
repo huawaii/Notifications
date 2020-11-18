@@ -45,16 +45,18 @@ import static com.huawaii.notifications.Settings.SettingsGroup1.PROGRESSBAR_CIRC
 /** Created by lzh on 16-8-11.**/
 public class CreateNotification {
 
-    private static final String TAG = "huawaii";
+    private static final String TAG = "CreateNotification";
 
     public static final String KEY_TEXT_REPLY = "key_text_reply";
     public static final String FILTER_INTENT_REPLY = "filter_intent_reply";
     public static final String FILTER_INTENT_ACTION = "intent.action.huawaii";
+    public static final String FILTER_SERVICE_INTENT_ACTION = "com.huawaii.notifications.ACTION_REPLY_SERVICE";
     private static NotificationManager mNotificationManager;
 
     private Context mContext;
     private PendingIntent mResultPendingIntent1;
     private PendingIntent mResultPendingIntent2;
+    private PendingIntent mResultPendingIntent3;
     private ReplyBroadcastReceiver mReplyReceiver;
     private BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -104,6 +106,7 @@ public class CreateNotification {
         mNotificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         mResultPendingIntent1 = getResultPendingIntent1();
         mResultPendingIntent2 = getResultPendingIntent3();
+        mResultPendingIntent3 = getResultPendingIntent4();
 
         mReplyReceiver = new ReplyBroadcastReceiver();
         IntentFilter intentFilter = new IntentFilter(FILTER_INTENT_REPLY);
@@ -173,6 +176,12 @@ public class CreateNotification {
         Intent intent = new Intent();
         intent.setAction(FILTER_INTENT_ACTION);
         return PendingIntent.getBroadcast(mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private PendingIntent getResultPendingIntent4() {
+        Intent intent = new Intent();
+        intent.setAction(FILTER_SERVICE_INTENT_ACTION);
+        return PendingIntent.getService(mContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
 
@@ -296,6 +305,11 @@ public class CreateNotification {
 
 
     private Notification createNormalNotification() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Bitmap picture = BitmapFactory.decodeResource(mContext.getResources(), R.mipmap.panda);
 
         Builder builder = (Build.VERSION.SDK_INT >= 26 ? new Builder(mContext, mChannelParam.toString()) : new Builder(mContext))
@@ -303,7 +317,7 @@ public class CreateNotification {
                 .setContentTitle(mContentTitle + "Normal Notification") // 显示于 line1
                 .setContentText(mContentText + "，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.，普通小通知.")   // 显示于 line3
                 .setLargeIcon(picture)
-                .setContentIntent(mResultPendingIntent1)
+                .setContentIntent(mResultPendingIntent3)
                 .setAutoCancel(true)
                 .setTicker("普通小通知！")
                 .setPriority(mNotificationPriority);
@@ -318,7 +332,7 @@ public class CreateNotification {
         RemoteViews remoteViews = new RemoteViews(mContext.getPackageName(), R.layout.notification_custom_remote);
         //实例化一个远程remote view
         remoteViews.setTextViewText(R.id.text_view, "自定义样式！");
-        remoteViews.setOnClickPendingIntent(R.id.image_view, mResultPendingIntent1);
+        remoteViews.setOnClickPendingIntent(R.id.image_view, mResultPendingIntent3);
         if (isSmallCustom) {
             notification.contentView = remoteViews;
         }
